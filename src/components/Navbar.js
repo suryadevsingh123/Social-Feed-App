@@ -38,20 +38,19 @@ const Navbar = () => {
   }, [user.uid]);
 
   return (
-    <nav className="bg-gray-600 flex items-center justify-between px-4 py-2 shadow-md">
-      {/* App Logo or Name */}
+    <nav className="bg-gray-600 flex items-center justify-between px-4 py-2 shadow-md w-[100%]">
+     
       <div className="text-white text-lg font-bold">Social Feed</div>
 
-      {/* Profile Image */}
-      <div className="cursor-pointer flex items-center">
-        <button onClick={handleLogOut} className="text-white text-lg font-bold">
+      <div className="cursor-pointer flex items-center mr-[34px]">
+        <button onClick={handleLogOut} className="text-white text-lg font-bold" >
           LogOut
         </button>
         <img
           onClick={handleProfileClick}
           src={userData?.profilePhoto || "https://via.placeholder.com/40"} // Replace with actual profile image URL
           alt="Profile"
-          className="w-10 h-10 rounded-full border-2 border-white"
+          className=" ml-[34px] w-11 h-11 rounded-full border-2 border-white"
         />
       </div>
     </nav>

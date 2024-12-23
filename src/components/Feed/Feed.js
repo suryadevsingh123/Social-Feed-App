@@ -14,7 +14,7 @@ const Feed = () => {
   }, []);
 
   return (
-    <div className="container mx-auto p-4 flex flex-col items-center">
+    <div className="container mx-auto p-4 flex flex-col items-center flex-wrap">
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
