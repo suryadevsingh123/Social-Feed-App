@@ -75,16 +75,3 @@ export const logInWithGoogle = async () => {
     throw error;
   }
 };
-
-
-// Log out
-export const logOut = async (navigate) => {
-  console.log("logout")
-  try {
-    await signOut(auth);
-    navigate("/login");
-  } catch (error) {
-    console.error("Error logging out:", error.message);
-    throw error;
-  }
-};

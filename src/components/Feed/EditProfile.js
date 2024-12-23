@@ -19,7 +19,6 @@ const EditProfile = () => {
       try {
         const userDoc = await getDoc(doc(db, "users", user.uid));
         if (userDoc.exists()) {
-          console.log(userDoc.data(), "Fetched User Data");
           setUserData(userDoc.data());
         } else {
           console.error("User document does not exist");
@@ -36,7 +35,6 @@ const EditProfile = () => {
     const reader = new FileReader();
     if (file) {
       reader.onload = () => {
-        console.log("Profile Photo Updated:", reader.result);
         setUserData((prevData) => ({ ...prevData, profilePhoto: reader.result }));
       };
       reader.readAsDataURL(file);
@@ -52,7 +50,6 @@ const EditProfile = () => {
 
     try {
       await setDoc(doc(db, "users", user.uid), userData);
-      console.log("User data updated successfully");
       alert("Profile updated successfully!");
     } catch (err) {
       console.error("Error updating user data:", err);

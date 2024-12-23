@@ -31,7 +31,6 @@ const NewPostForm = () => {
     try {
       const promises = files.map((file) => convertToBase64(file));
       const base64Results = await Promise.all(promises);
-      console.log(base64Results);
       setPostImages(base64Results);
     } catch (error) {
       console.error("Error processing images:", error);

@@ -4,7 +4,6 @@ import { auth } from "../../config/firebaseConfig"; // Import your Firebase auth
 
 const AuthWrapper = ({ children }) => {
   const user = auth.currentUser; // Check the current authenticated user
-    console.log(user,"diwdw",auth);
   if (!user) {
     // If no user is logged in, redirect to the login page
     return <Navigate to="/login" replace />;

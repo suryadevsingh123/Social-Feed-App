@@ -84,7 +84,6 @@ const Post = ({ post }) => {
         </div>
       </div>
       <ShareModal
-        style={{ color: "red" }}
         open={open}
         onClose={() => setOpen(false)}
         url="https://www.example.com/post/123"
